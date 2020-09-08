@@ -23,6 +23,15 @@ async def ping(ctx):
 async def on_voice_state_update(before, after):
     channel = client.get_channel(738726518292742247)
     await channel.send('もくもく会が始まったようです！')
+    
+    
 
+global voich
+# 接続
+if message.content.startswith('/connect'):
+    voich = await discord.VoiceChannel.connect(message.author.voice.channel)
+# 切断
+if message.content.startswith('/discon'):
+    await voich.disconnect()
 
 bot.run(token)
