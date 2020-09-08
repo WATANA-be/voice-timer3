@@ -22,7 +22,7 @@ async def ping(ctx):
 @client.event()
 async def on_voice_state_update(before, after):
     channel = client.get_channel('738726518292742247')
-    await channel.send('もくもく会が始まったようです！')
+    await replay_channel.send('もくもく会が始まったようです！')
 
 
 bot.run(token)
