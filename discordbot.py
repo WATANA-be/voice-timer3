@@ -22,6 +22,7 @@ async def ping(ctx):
 @client.event
 async def on_voice_state_update(before, after):
     print("もくもく会が始まったようです！")
+    reply_channel_name = "雑談"
 
 
 bot.run(token)
