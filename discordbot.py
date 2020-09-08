@@ -14,7 +14,7 @@ async def on_voice_state_update(before, after):
 if(before.voice_channel is None):#入室時
     pretime_dict[after.name] = datetime.datetime.now()
 else(after.voice_channel is None):#退出時
-    duration_time = pretime_dict[before.name] - datetime.datetime.now()
+    duration_time = {pretime_dict[before.name] - datetime.datetime.now()}
     duration_time_adjust = int(duration_time.total_seconds()) * -1
     
 reply_channel_name = "雑談"
