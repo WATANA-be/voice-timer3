@@ -16,22 +16,10 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-    
-@bot.attack    
-const mainChannelId = [738726518292742247];
 
-client.on('voiceStateUpdate', (oldGuildMember, newGuildMember) =>{
- if(oldGuildMember.voiceChannelID === undefined && newGuildMember.voiceChannelID !== undefined){
-   if(client.channels.get(newGuildMember.voiceChannelID).members.size == 1){
-     if (newGuildMember.voiceChannelID == "725595164105768984") {
-       newGuildMember.voiceChannel.createInvite({"maxAge":"0"})
-         .then(invite => sendMsg(
-           mainChannelId, "<@" + newGuildMember.user.id +"> が通話を開始しました！\n" + invite.url
-         ));
-     }
-   }
- }
-});
+@client.event
+async def on_voice_state_update(before, after):
+  print("もくもく会が始まったようです！")
 
 
 bot.run(token)
