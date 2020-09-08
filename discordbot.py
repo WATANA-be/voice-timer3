@@ -19,7 +19,7 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
-@client.event
+@client.event()
 async def on_voice_state_update(before, after):
     channel = client.get_channel('738726518292742247')
     await channel.send('もくもく会が始まったようです！')
