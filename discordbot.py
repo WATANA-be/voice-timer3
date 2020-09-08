@@ -1,5 +1,7 @@
 import discord
 import datetime
+import os
+token = os.environ['DISCORD_BOT_TOKEN']
 
 client = discord.Client()
 pretime_dict = {}
@@ -24,4 +26,5 @@ async def on_voice_state_update(before, after):
 
     await client.send_message(reply_channel ,reply_text)
 
-client.run("token")
+
+bot.run(token)#ボットのトークン
