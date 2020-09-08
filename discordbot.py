@@ -17,7 +17,7 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
     
-    
+@bot.attack    
 const mainChannelId = [738726518292742247];
 
 client.on('voiceStateUpdate', (oldGuildMember, newGuildMember) =>{
