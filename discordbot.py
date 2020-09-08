@@ -21,7 +21,7 @@ async def on_voice_state_update(before, after):
     duration_time = pretime_dict[before.name] - datetime.datetime.now()
     duration_time_adjust = int(duration_time.total_seconds()) * -1
 
-    reply_channel_name = "general"
+    reply_channel_name = "雑談"
     reply_channel = [channel for channel in before.server.channels if channel.name == reply_channel_name][0]
     reply_text = after.name + "　が　"+ before.voice_channel.name + "　から抜けました。　通話時間：" + str(duration_time_adjust) +"秒"
 
