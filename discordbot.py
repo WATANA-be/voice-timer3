@@ -50,7 +50,7 @@ async def on_voice_state_update(member, before, after):
 # テキストチャンネルを検索する関数
 def _channel_find(voiceChannel):
     text_channels = voiceChannel.guild.text_channels
-    channel_name = CHANNEL_PREFIX + str(voiceChannel.id)
+    channel_name = '雑談' + str(738726518292742247)
     # 名前からチャンネルオブジェクトを取得する
     return discord.utils.get(text_channels, name=channel_name)
 
@@ -79,7 +79,7 @@ def _init_overwrites(guild, member):
 async def _channel_create(member, voiceChannel):
     guild = voiceChannel.guild
 
-    channel_name = CHANNEL_PREFIX + str(voiceChannel.id)
+    channel_name = CHANNEL_PREFIX + str(738726518292742247)
     overwrites = _init_overwrites(guild, member)
     category = voiceChannel.category
 
