@@ -120,4 +120,4 @@ async def _channel_send_join(member, voiceChannel):
 
 
 if __name__ == "__main__":
-    client.run("あなたのbotのトークン")
+    client.run("752707979177885808")
