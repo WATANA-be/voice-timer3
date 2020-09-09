@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import os
 import traceback
+import datetime
+import timedelta
 client = discord.Client()
 
 bot = commands.Bot(command_prefix='/')
